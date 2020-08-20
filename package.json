@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-api",
+  "version": "1.0.0",
+  "description": "Portfolio API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdevprog/portfolio-api.git"
+  },
+  "author": "VitalijY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webdevprog/portfolio-api/issues"
+  },
+  "homepage": "https://github.com/webdevprog/portfolio-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
