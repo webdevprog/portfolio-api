@@ -8,6 +8,6 @@ const schema = new Schema({
     { timestamps: true }
 );
 
-const Project = mongoose.model('project', schema);
+const ProjectModel = mongoose.model('project', schema);
 
-export default Project
+export default ProjectModel;
