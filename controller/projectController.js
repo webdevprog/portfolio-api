@@ -5,17 +5,19 @@ class ProjectController {
             if (err) {
                 res.status(400).send(err)
             } else {
-                res.send(project);
+                res.status(200).json({...project, id: req.params.projectID});
             }
         });
     }
 
     getAll(req, res) {
         ProjectModel.find({}, function (err, project) {
-            if (err) {
-                res.send(err);
-            } else {
+            try {
+                res.setHeader('Access-Control-Expose-Headers', 'Content-Range');
+                res.setHeader('Content-Range', 'project 0-9/9');
                 res.send(project);
+            } catch (e) {
+                console.log(e);
             }
         });
     }
@@ -59,12 +61,9 @@ class ProjectController {
         )
     }
 
-
-
     delete(req, res) {
         ProjectModel.deleteOne({ _id: req.params.projectID }, function (err) {
             if (err) return handleError(err)
-
             res.status(200).send('remove Data')
         });
     }

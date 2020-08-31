@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use('/api/project/', require('./routers/project.routers.js'));
+app.use('/api/admin/project/', require('./routers/project.routers.js'));
 
 const port = 5000;
 async function start() {
